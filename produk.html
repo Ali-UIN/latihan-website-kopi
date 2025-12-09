@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Produk UMKM Kopi Nusantara</title>
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<input type="hidden" name="viewport" content="width=device-width, initial-scale=1.0">
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <div class="container">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="Logo UMKM" width="40" height="40"/>
+      </a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+          <li class="nav-item"><a class="nav-link" href="tentang.html">Tentang Kami</a></li>
+          <li class="nav-item"><a class="nav-link" href="produk.html">Produk</a></li>
+          <li class="nav-item"><a class="nav-link" href="galeri.html">Galeri</a></li>
+          <li class="nav-item"><a class="nav-link" href="kontak.html">Kontak</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+    <header>
+    </header>
+
+    <main>
+        <h2>Produk Unggulan Kami</h2>
+        <p>Berikut Daftar produk Kopi Nusantara yang kami sediakan : </p>
+
+        <table border="1" cellspacing="0" cellpadding="8">
+            <thead>
+                <tr>
+                    <th>Produk</th>
+                    <th>Ukuran</th>
+                    <th>Harga</th>
+                    <th>Jenis Kopi</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kopi Arabika Gayo</td>
+                    <td>250g</td>
+                    <td>Rp 45.000</td>
+                    <td style="vertical-align: top;" rowspan="2">Arabika</td>
+                </tr>
+                <tr>
+                    <td>Kopi Arabika Petungkriyono</td>
+                    <td>250g</td>
+                    <td>Rp 85.000</td>
+                </tr>
+                <tr>
+                    <td>Kopi Robusta Batang</td>
+                    <td>250g</td>
+                    <td>Rp 35.000</td>
+                    <td style="vertical-align: top;" rowspan="3">Robusta</td>
+                </tr>
+                <tr>
+                    <td>Kopi Robusta Temanggung</td>
+                    <td>250g</td>
+                    <td>Rp 38.000</td>
+                </tr>
+                <tr>
+                    <td>Kopi Robusta Linggoasri</td>
+                    <td>250g</td>
+                    <td>Rp 40.000</td>
+                </tr>
+                <tr>
+                    <td>Kopi Liberika Riau</td>
+                    <td>250g</td>
+                    <td>Rp 42.000</td>
+                    <td>Liberika</td>
+                </tr>
+                <tr>
+                    <td colspan="4" style="text-align: center; background-color: #eee;">
+                        Semua harga sudah termasuk PPN.
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="container my-5">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Images/produk1.png" class="card-img-top" alt="Produk 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Kopi Arabika Gayo</h5>
+                            <p class="card-text">Kopi khas Aceh dengan aroma segar dan rasa asam yang halus.</p>
+                            <p class="text-warning">Rating: <span id="hasil-rating">★★★ Rekomendasi Biasa</span></p>
+                            <a href="#" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Images/produk1.png" class="card-img-top" alt="Produk 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Kopi Arabika Petungkriyono</h5>
+                            <p class="card-text">Kopi premium dengan cita rasa eksotis dari Petungkriyono.</p>
+                            <p class="text-warning">Rating: ★★★★★</p>
+                            <a href="#" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="Images/produk1.png" class="card-img-top" alt="Produk 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Kopi Robusta Temanggung</h5>
+                            <p class="card-text">Robusta pilihan dengan body kuat dan rasa yang khas.</p>
+                            <p class="text-warning">Rating: ★★★★</p>
+                            <a href="#" class="btn btn-primary">Beli Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <h3>Layanan Unggulan:</h3> 
+        <ul id="layanan-list"></ul> 
+
+        <h3>Form Pemesanan</h3> 
+        <form onsubmit="return cekForm()"> 
+        <input type="text" id="namaProduk" placeholder="Nama Produk"><br> 
+        <input type="number" id="jumlah" placeholder="Jumlah"><br> 
+        <button type="submit">Pesan</button> 
+        </form>
+
+        <h3>Dengarkan Cerita Kami</h3>
+        <audio controls>
+            <source src="audio/cerita_kopi.mp3" type="audio/mpeg">
+            Audio tidak tersedia di browser Anda.
+        </audio>
+
+       
+    </main>
+    <h3>Daftar Wishlist Produk</h3>
+    <form>
+        <input type="text" name="produkInput" id="produkInput" placeholder="Masukkan nama produk">
+        <p>Preview: <span id="previewProduk"></span></p>
+        <button id="tambahBtn">Tambah Produk</button>
+    </form>
+
+    <ul id="daftarProduk"></ul>
+    <hr />
+    <label for="temaSelect">Pilih Tema:</label>
+    <select id="temaSelect">
+        <option value="white">Putih</option>
+        <option value="lightblue">Biru Muda</option>
+        <option value="lightyellow">Kuning Muda</option>
+    </select>
+    <footer>
+        <p>&copy; 2025 Kopi Nusantara. All rights reserved.</p>
+    </footer>
+    <script> 
+    let rating = 4; 
+    
+    if (rating >= 4.5) { 
+        document.getElementById("hasil-rating").textContent = "★★★★★ Sangat Disarankan"; 
+    } else if (rating >= 3) { 
+        document.getElementById("hasil-rating").textContent = "★★★ Rekomendasi Biasa"; 
+    } else { 
+        document.getElementById("hasil-rating").textContent = "★ Tidak Direkomendasikan"; 
+    } 
+     function cekForm() { 
+    let nama = document.getElementById("namaProduk").value; 
+    let jumlah = document.getElementById("jumlah").value; 
+ 
+    if (nama === "" || jumlah === "") { 
+      alert("Semua kolom wajib diisi."); 
+      return false; 
+    } 
+ 
+    if (jumlah <= 0) { 
+      alert("Jumlah harus lebih dari 0"); 
+      return false; 
+    } 
+ 
+    alert("Pemesanan berhasil dikirim!"); 
+    return true; 
+    } 
+    let layanan = ["Gratis Ongkir", "Bayar di Tempat", "Garansi 30 Hari"]; 
+    
+    layanan.forEach(function(item) { 
+        let li = document.createElement("li"); 
+        li.textContent = item; 
+        document.getElementById("layanan-list").appendChild(li); 
+    }); 
+
+    document.addEventListener("DOMContentLoaded", function() {
+        const produkInput = document.getElementById("produkInput");
+        const tambahBtn = document.getElementById("tambahBtn");
+        const daftarProduk = document.getElementById("daftarProduk");
+        const previewProduk = document.getElementById("previewProduk");
+        const temaSelect = document.getElementById("temaSelect");
+
+        // Event 1 : Tambah Produk Ke daftar (click)
+        tambahBtn.addEventListener("click", function(e){
+            e.preventDefault();
+
+            const namaProduk = produkInput.value.trim();
+            if(namaProduk !== "") {
+                const li = document.createElement("li");
+                li.textContent = namaProduk;
+                // Tambahkan Event Hover (mouseover & mouseout)
+                li.addEventListener("mouseover", () => {
+                    li.style.backgroundColor = "#e0e0e0";
+                });
+                li.addEventListener("mouseout", () => {
+                    li.style.backgroundColor = "";
+                });
+
+                // Tambahkan event hapus (double click)
+                li.addEventListener("dblclick", () => {
+                    if (confirm("Yakin ingin menghapus produk ini?")) {
+                        li.remove();
+                    }
+                });
+
+                daftarProduk.appendChild(li);
+                produkInput.value = "";
+                previewProduk.textContent = "";
+            }
+        });
+        produkInput.addEventListener("keyup", function() {
+            previewProduk.textContent = produkInput.value;
+        });
+        // Ubah tema Background
+        temaSelect.addEventListener("change", function() {
+            document.body.style.backgroundColor = temaSelect.value;
+        });
+    });
+
+    // jQuery untuk tombol Beli Sekarang
+    $(document).ready(function(){
+        $(".btn-primary").click(function(e){
+            e.preventDefault();
+            alert("Terima kasih, produk akan segera diproses!");
+        });
+    });
+    </script>
+</body>
+
+</html>
